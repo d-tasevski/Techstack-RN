@@ -1,7 +1,7 @@
 import types from './types';
 
 const initialState = {
-	selected: -1,
+	selected: null,
 };
 
 export default (state = initialState, action) => {
