@@ -1,0 +1,4 @@
+export default {
+	GET_LIBRARIES: 'GET_LIBRARIES',
+	GET_SELECTED_LIB: 'GET_SELECTED_LIB',
+};
