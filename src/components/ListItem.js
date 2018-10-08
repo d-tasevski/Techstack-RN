@@ -1,13 +1,17 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
 
 import CardSection from './CardSection';
 
-const ListItem = props => {
+const ListItem = ({ selectLib, library: { id, title } }) => {
 	return (
-		<CardSection>
-			<Text style={styles.title}>{props.library.title}</Text>
-		</CardSection>
+		<TouchableWithoutFeedback onPress={() => selectLib(id)}>
+			<View>
+				<CardSection>
+					<Text style={styles.title}>{title}</Text>
+				</CardSection>
+			</View>
+		</TouchableWithoutFeedback>
 	);
 };
 
